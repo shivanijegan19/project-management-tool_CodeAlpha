@@ -1,0 +1,134 @@
+{
+  "users": [
+    {
+      "_id": "94a493d2-e201-4534-b7e8-cab72cd390e6",
+      "name": "priya sharma",
+      "email": "you@example.com",
+      "password": "$2a$10$jArG2LK1b6XjhC1ikJOrmO9x..MOVvu8e/FzE5S.dT2Z4pmewpACi",
+      "createdAt": "2026-06-22T03:46:06.900Z"
+    }
+  ],
+  "projects": [
+    {
+      "_id": "e993563a-4194-4331-85fd-25c8f6af70e6",
+      "name": "web designing",
+      "description": "project management tool using html",
+      "owner": "94a493d2-e201-4534-b7e8-cab72cd390e6",
+      "members": [
+        "94a493d2-e201-4534-b7e8-cab72cd390e6"
+      ],
+      "createdAt": "2026-06-22T03:47:35.421Z"
+    }
+  ],
+  "tasks": [
+    {
+      "_id": "30c9ade9-d536-4023-b795-899598e11559",
+      "title": "create a social website",
+      "description": "social website with likes comments",
+      "status": "in-progress",
+      "project": "e993563a-4194-4331-85fd-25c8f6af70e6",
+      "assignedTo": "94a493d2-e201-4534-b7e8-cab72cd390e6",
+      "createdBy": "94a493d2-e201-4534-b7e8-cab72cd390e6",
+      "createdAt": "2026-06-22T03:50:53.673Z"
+    },
+    {
+      "_id": "31bf6339-0f69-40aa-a42a-eb6c96c1a3ff",
+      "title": "Design homepage layout",
+      "description": "",
+      "status": "todo",
+      "project": "e993563a-4194-4331-85fd-25c8f6af70e6",
+      "assignedTo": null,
+      "createdBy": "94a493d2-e201-4534-b7e8-cab72cd390e6",
+      "createdAt": "2026-06-22T03:53:15.104Z"
+    },
+    {
+      "_id": "a09c4f21-eb42-4539-b5af-1f2897a478fc",
+      "title": "Create wireframes for about page",
+      "description": "",
+      "status": "todo",
+      "project": "e993563a-4194-4331-85fd-25c8f6af70e6",
+      "assignedTo": null,
+      "createdBy": "94a493d2-e201-4534-b7e8-cab72cd390e6",
+      "createdAt": "2026-06-22T03:53:39.538Z"
+    },
+    {
+      "_id": "6dc6bdd1-d00b-4c84-934b-ec8f4bb4f29f",
+      "title": "Pick color palette & fonts",
+      "description": "",
+      "status": "todo",
+      "project": "e993563a-4194-4331-85fd-25c8f6af70e6",
+      "assignedTo": null,
+      "createdBy": "94a493d2-e201-4534-b7e8-cab72cd390e6",
+      "createdAt": "2026-06-22T03:54:00.867Z"
+    },
+    {
+      "_id": "be25e5dd-8395-4081-baa4-9543d2089c25",
+      "title": "Write content for services page",
+      "description": "",
+      "status": "todo",
+      "project": "e993563a-4194-4331-85fd-25c8f6af70e6",
+      "assignedTo": null,
+      "createdBy": "94a493d2-e201-4534-b7e8-cab72cd390e6",
+      "createdAt": "2026-06-22T03:54:15.459Z"
+    },
+    {
+      "_id": "e11621b4-c1f6-4f5d-97f6-d67adc81092b",
+      "title": "Build responsive navbar",
+      "description": "",
+      "status": "in-progress",
+      "project": "e993563a-4194-4331-85fd-25c8f6af70e6",
+      "assignedTo": null,
+      "createdBy": "94a493d2-e201-4534-b7e8-cab72cd390e6",
+      "createdAt": "2026-06-22T03:54:37.852Z"
+    },
+    {
+      "_id": "a9df2985-e760-4815-a457-c3326e498616",
+      "title": "Design contact form",
+      "description": "",
+      "status": "in-progress",
+      "project": "e993563a-4194-4331-85fd-25c8f6af70e6",
+      "assignedTo": null,
+      "createdBy": "94a493d2-e201-4534-b7e8-cab72cd390e6",
+      "createdAt": "2026-06-22T03:54:57.474Z"
+    },
+    {
+      "_id": "9182362c-a504-4eb4-bfcf-e4b0d4e03b0d",
+      "title": "Set up project repository",
+      "description": "",
+      "status": "done",
+      "project": "e993563a-4194-4331-85fd-25c8f6af70e6",
+      "assignedTo": null,
+      "createdBy": "94a493d2-e201-4534-b7e8-cab72cd390e6",
+      "createdAt": "2026-06-22T03:55:14.689Z"
+    },
+    {
+      "_id": "c4496160-4f28-41f2-bb6d-8ecfad0854f1",
+      "title": "Finalize logo design",
+      "description": "",
+      "status": "done",
+      "project": "e993563a-4194-4331-85fd-25c8f6af70e6",
+      "assignedTo": null,
+      "createdBy": "94a493d2-e201-4534-b7e8-cab72cd390e6",
+      "createdAt": "2026-06-22T03:55:40.897Z"
+    },
+    {
+      "_id": "af704ee3-cdb8-4a9c-9bcd-407c79502e6c",
+      "title": "Research competitor websites",
+      "description": "",
+      "status": "done",
+      "project": "e993563a-4194-4331-85fd-25c8f6af70e6",
+      "assignedTo": null,
+      "createdBy": "94a493d2-e201-4534-b7e8-cab72cd390e6",
+      "createdAt": "2026-06-22T03:55:54.573Z"
+    }
+  ],
+  "comments": [
+    {
+      "_id": "726f6e18-d46c-4760-bb87-94ec698f4e70",
+      "text": "Going with a minimal layout, keeping the hero section simple",
+      "task": "31bf6339-0f69-40aa-a42a-eb6c96c1a3ff",
+      "author": "94a493d2-e201-4534-b7e8-cab72cd390e6",
+      "createdAt": "2026-06-22T03:57:38.496Z"
+    }
+  ]
+}

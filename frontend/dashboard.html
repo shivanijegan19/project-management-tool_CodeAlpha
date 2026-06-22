@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Projects - TaskBoard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark"></span>
+      TaskBoard
+    </div>
+    <div class="topbar-right">
+      <span class="user-pill" id="user-pill">...</span>
+      <button class="btn btn-secondary btn-small" id="logout-btn">Log out</button>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+    <div class="page-head">
+      <div>
+        <h1>Your projects</h1>
+        <p>Boards you own or have been added to.</p>
+      </div>
+      <button class="btn" id="new-project-btn">+ New project</button>
+    </div>
+
+    <div class="project-grid" id="project-grid"></div>
+    <div class="empty-state" id="empty-state" style="display:none;">
+      <p>No projects yet. Create your first one to get started.</p>
+    </div>
+  </main>
+
+  <!-- New project modal -->
+  <div class="modal-backdrop" id="modal-backdrop">
+    <div class="modal">
+      <h2>New project</h2>
+      <p class="modal-sub">Give your board a name your team will recognize.</p>
+
+      <form id="project-form">
+        <label for="project-name">Project name</label>
+        <input type="text" id="project-name" required placeholder="Website Redesign" />
+
+        <label for="project-desc">Description (optional)</label>
+        <textarea id="project-desc" rows="3" placeholder="What is this project about?"></textarea>
+
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary" id="cancel-modal-btn">Cancel</button>
+          <button type="submit" class="btn">Create project</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast-stack"></div>
+
+  <script src="js/api.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

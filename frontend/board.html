@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Board - TaskBoard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="board-head">
+    <div>
+      <a href="dashboard.html" class="back-link">&larr; All projects</a>
+      <h1 id="project-name">Loading...</h1>
+    </div>
+    <div class="topbar-right">
+      <button class="btn btn-secondary btn-small" id="add-member-btn">+ Add teammate</button>
+    </div>
+  </div>
+
+  <div class="board-wrap">
+    <div class="column" data-status="todo">
+      <div class="column-head">
+        <span class="col-title"><span class="dot dot-todo"></span>To Do</span>
+        <span class="count" id="count-todo">0</span>
+      </div>
+      <div class="cards" id="cards-todo"></div>
+      <button class="add-card-btn" data-status="todo">+ Add a task</button>
+    </div>
+
+    <div class="column" data-status="in-progress">
+      <div class="column-head">
+        <span class="col-title"><span class="dot dot-progress"></span>In Progress</span>
+        <span class="count" id="count-in-progress">0</span>
+      </div>
+      <div class="cards" id="cards-in-progress"></div>
+      <button class="add-card-btn" data-status="in-progress">+ Add a task</button>
+    </div>
+
+    <div class="column" data-status="done">
+      <div class="column-head">
+        <span class="col-title"><span class="dot dot-done"></span>Done</span>
+        <span class="count" id="count-done">0</span>
+      </div>
+      <div class="cards" id="cards-done"></div>
+      <button class="add-card-btn" data-status="done">+ Add a task</button>
+    </div>
+  </div>
+
+  <!-- New task modal -->
+  <div class="modal-backdrop" id="task-modal-backdrop">
+    <div class="modal">
+      <h2>New task</h2>
+      <p class="modal-sub">Add a card to the <span id="new-task-status-label">To Do</span> column.</p>
+
+      <form id="task-form">
+        <label for="task-title">Title</label>
+        <input type="text" id="task-title" required placeholder="Design the login page" />
+
+        <label for="task-desc">Description (optional)</label>
+        <textarea id="task-desc" rows="3" placeholder="Add more detail..."></textarea>
+
+        <label for="task-assignee">Assign to</label>
+        <select id="task-assignee">
+          <option value="">Unassigned</option>
+        </select>
+
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary" id="cancel-task-modal-btn">Cancel</button>
+          <button type="submit" class="btn">Add task</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Task detail modal -->
+  <div class="modal-backdrop" id="detail-modal-backdrop">
+    <div class="modal task-modal">
+      <h2 id="detail-title"></h2>
+      <p class="modal-sub" id="detail-desc"></p>
+
+      <div class="status-row" id="detail-status-row">
+        <button class="status-pill" data-status="todo">To Do</button>
+        <button class="status-pill" data-status="in-progress">In Progress</button>
+        <button class="status-pill" data-status="done">Done</button>
+      </div>
+
+      <label for="detail-assignee" style="margin-top:14px;">Assigned to</label>
+      <select id="detail-assignee"></select>
+
+      <label style="margin-top:16px;">Comments</label>
+      <div class="comments-list" id="comments-list"></div>
+      <form class="comment-form" id="comment-form">
+        <input type="text" id="comment-input" placeholder="Write a comment..." required />
+        <button type="submit" class="btn btn-small">Send</button>
+      </form>
+
+      <div class="modal-actions">
+        <button type="button" class="btn btn-danger btn-small" id="delete-task-btn">Delete task</button>
+        <button type="button" class="btn btn-secondary" id="close-detail-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add teammate modal -->
+  <div class="modal-backdrop" id="member-modal-backdrop">
+    <div class="modal">
+      <h2>Add a teammate</h2>
+      <p class="modal-sub">They need to already have a TaskBoard account.</p>
+      <form id="member-form">
+        <label for="member-email">Teammate's email</label>
+        <input type="email" id="member-email" required placeholder="teammate@example.com" />
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary" id="cancel-member-modal-btn">Cancel</button>
+          <button type="submit" class="btn">Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast-stack"></div>
+
+  <script src="js/api.js"></script>
+  <script src="js/board.js"></script>
+</body>
+</html>
